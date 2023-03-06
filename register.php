@@ -1,32 +1,3 @@
-<!-- <?php
-
-        require_once("config.php");
-
-        if (isset($_POST['submit'])) {
-
-            $nama = filter_input(INPUT_POST, 'nama');
-            $username = filter_input(INPUT_POST, 'username');
-            $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-            $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-
-            $sql = "INSERT INTO tb_user(nama,email,username,password) 
-            VALUES ($nama, $email,$username, $password)";
-            $stmt = $db->prepare($sql);
-            $params = array(
-                "nama" => $nama,
-                "username" => $username,
-                "password" => $password,
-                "email" => $email
-            );
-
-            $saved = $stmt->execute($params);
-            if ($saved)
-                header("Location: login.php");
-        }
-
-        ?> -->
-
-
 
 <!DOCTYPE html>
 <html lang="en">

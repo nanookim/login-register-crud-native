@@ -23,18 +23,6 @@
                         <figure><img src="assets/login-register/images/signin-image.jpg" alt="sing up image"></figure>
                         <a href="register.php" class="signup-image-link">Create an account</a>
                     </div>
-                    <?php
-                    if (isset($_GET['pesan'])) {
-                        if ($_GET['pesan'] == "gagal") {
-                            echo "Login gagal! username dan password salah!";
-                        } else if ($_GET['pesan'] == "logout") {
-                            echo "Anda telah berhasil logout";
-                        } else if ($_GET['pesan'] == "belum_login") {
-                            echo "Anda harus login untuk mengakses halaman admin";
-                        }
-                    }
-                    ?>
-
                     <div class="signin-form">
                         <a href="index.php" class="form-title">Home</a>/ Sign In
                         <h2 class="form-title">Sign In</h2>
