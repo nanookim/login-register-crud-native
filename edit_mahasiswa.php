@@ -1,6 +1,7 @@
 
 <?php
-
+session_start();
+if(!isset($_SESSION["username"])) header("Location: login.php");
 include("config.php");
 
 // kalau tidak ada id di query string
@@ -75,7 +76,7 @@ if (mysqli_num_rows($query) < 1) {
                             <li class="user-profile header-notification">
                                 <a href="#!" class="waves-effect waves-light">
                                     <img src="assets/menu-utama/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                    <span><?= $_SESSION["user"]["nama"] ?></span>
+                                    <span><?= $_SESSION["username"] ?></span>
                                     <i class="ti-angle-down"></i>
                                 </a>
                                 <ul class="show-notification profile-notification">
@@ -100,7 +101,7 @@ if (mysqli_num_rows($query) < 1) {
                                 <div class="main-menu-header">
                                     <img class="img-80 img-radius" src="assets/menu-utama/images/avatar-4.jpg" alt="User-Profile-Image">
                                     <div class="user-details">
-                                        <span id="more-details"><?= $_SESSION["user"]["nama"] ?></span>
+                                        <span id="more-details"><?= $_SESSION["username"] ?></span>
                                     </div>
                                 </div>
 
@@ -127,7 +128,7 @@ if (mysqli_num_rows($query) < 1) {
                                     <div class="col-md-8">
                                         <div class="page-header-title">
                                             <h5 class="m-b-10">Dashboard</h5>
-                                            <p class="m-b-0">Welcome <?= $_SESSION["user"]["nama"] ?></p>
+                                            <p class="m-b-0">Welcome <?= $_SESSION["username"] ?></p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
